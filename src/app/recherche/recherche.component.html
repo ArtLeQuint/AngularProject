@@ -1,0 +1,11 @@
+<label>Country name : </label>
+<input [(ngModel)]="countryName">
+<button (click)="onClick()" [disabled]="countryName==''" routerLink="/">Chercher</button>
+<div>La recherche s'effectue sur : {{countryName}}</div>
+<div *ngIf="router.url == '/'">
+  <div *ngFor="let c of countryList">
+    <div *ngIf="c.name.toLowerCase().includes(countryName.toLowerCase())">
+      <app-country [country]="c"></app-country>
+    </div>
+  </div>
+</div>
