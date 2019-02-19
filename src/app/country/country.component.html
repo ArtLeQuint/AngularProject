@@ -5,12 +5,13 @@
         {{country.name}}
       </mat-panel-title>
       <mat-panel-description>
+        <div class="nativeName">
         {{country.nativeName}}
-        &nbsp;&nbsp;&nbsp;
-        <img margin-left="5px" src={{country.flag}} height="20px" width="30px">
+        </div>
+        <img class="flag" src={{country.flag}}>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <!--Content Here-->
+    <!--Full Content Here-->
   </mat-expansion-panel>
 </div>
 

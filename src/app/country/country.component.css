@@ -1,0 +1,25 @@
+.countryDetailsContent {
+    margin-top : 30px;
+}
+
+.mat-expansion-panel {
+  padding: 10px;
+}
+
+.mat-expansion-panel-header-title {
+  width: 40%;
+}
+.mat-expansion-panel-header-description {
+  width: 50%;
+}
+
+.nativeName {
+  width: 50%;
+}
+
+.flag {
+  padding-left: 5px;
+  height: 50px;
+  width: 25%;
+  vertical-align: bottom;
+}

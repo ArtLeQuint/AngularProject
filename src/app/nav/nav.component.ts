@@ -10,9 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class NavComponent {
 
-  search = true;
-  euCountries = false;
-  naCountries = false;
+  type = 'search';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -22,28 +20,7 @@ export class NavComponent {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   onClick(link: string) {
-    switch (link) {
-      case 'search':
-        this.search = true;
-        this.euCountries = false;
-        this.naCountries = false;
-        break;
-      case 'euCountries':
-        this.search = false;
-        this.euCountries = true;
-        this.naCountries = false;
-        break;
-      case 'naCountries':
-        this.search = false;
-        this.euCountries = false;
-        this.naCountries = true;
-        break;
-      default:
-        this.search = true;
-        this.euCountries = false;
-        this.naCountries = false;
-        break;
-    }
+    this.type = link;
   }
 
 }

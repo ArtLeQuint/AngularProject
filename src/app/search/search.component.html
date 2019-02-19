@@ -1,5 +1,6 @@
-<div class='researchContent'>
-<mat-button-toggle-group #group="matButtonToggleGroup" value="all">
+<div class='researchHeader'>
+  <h1 *ngIf="">Global Research</h1>
+  <mat-button-toggle-group #group="matButtonToggleGroup" value="all" class='buttonGroup'>
     <mat-button-toggle value="search" routerLink="/">
       <mat-icon>
         search
@@ -11,12 +12,38 @@
       </mat-icon>
     </mat-button-toggle>
     <mat-form-field class="searchInput">
-      <input matInput [(ngModel)]="countryName" placeholder="Type country here" [disabled]="group.value != 'search'">
+    <mat-select [(value)]="selected" placeholder="Search by..." [disabled]="group.value != 'search'">
+        <mat-option>None</mat-option>
+        <mat-option value="name">Country name</mat-option>
+        <mat-option value="capital">Country's Capital name</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="searchInput">
+      <input matInput [(ngModel)]="countryName" placeholder="Type country name here" [disabled]="group.value != 'search' || selected === undefined || selected != 'name'">
+      <input matInput [(ngModel)]="capital" placeholder="Type country capital name here" [disabled]="group.value != 'search' || selected === undefined || selected != 'capital'">
+      <input matInput [(ngModel)]="region" placeholder="Type country region name here" [disabled]="group.value != 'search' || selected === undefined || selected != 'other'">
     </mat-form-field>
   </mat-button-toggle-group>
+  <button mat-icon-button class="refreshButton" (click)="ngOnInit()">
+    <mat-icon>
+      refresh
+    </mat-icon>
+  </button>
+</div>
+<div class="researchContent">
   <mat-nav-list *ngIf="router.url == '/'">
     <mat-accordion mat-list-item href="#" *ngFor="let c of countryList">
-      <app-country [country]="c" [hidden]="!(all || c.name.toLowerCase().includes(countryName.toLowerCase()))"></app-country>
+      <app-country [country]="c" *ngIf="group.value == 'all' && check(c)"></app-country>
+      <app-country [country]="c" *ngIf="c.name.toLowerCase().includes(countryName.toLowerCase()) 
+                                        && selected == 'name' && countryName != ''
+                                        && group.value =='search' && check(c)"></app-country>
+      <app-country [country]="c" *ngIf="c.capital.toLowerCase().includes(capital.toLowerCase()) 
+                                        && selected == 'capital' && capital != ''
+                                        && group.value =='search' && check(c)"></app-country>
+      <app-country [country]="c" *ngIf="c.region.toLowerCase().includes(region.toLowerCase())
+                                        && selected == 'region' && region != ''
+                                        && group.value =='search' && check(c)"></app-country>
     </mat-accordion>
   </mat-nav-list>
 </div>

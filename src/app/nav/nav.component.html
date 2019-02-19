@@ -22,7 +22,7 @@
       </button>
       <span>Country Spotter</span>
     </mat-toolbar>
-    <app-search *ngIf="search"></app-search>
+    <app-search [type]="type"></app-search>
     <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -9,11 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule,
          MatInputModule, MatButtonModule, MatGridListModule, MatMenuModule,
-         MatButtonToggleModule, MatExpansionModule,
+         MatButtonToggleModule, MatExpansionModule, MatSelectModule,
        } from '@angular/material';
 import { SearchComponent } from './search/search.component';
 import { NavComponent } from './nav/nav.component';
-import { CountryDetailsComponent } from './country-details/country-details.component';
 
 const appRoutes: Routes = [
   { path: 'recherche', component: SearchComponent }
@@ -25,7 +24,6 @@ const appRoutes: Routes = [
     CountryComponent,
     SearchComponent,
     NavComponent,
-    CountryDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +42,7 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatButtonToggleModule,
     MatExpansionModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
