@@ -1,0 +1,22 @@
+<div class='researchContent'>
+<mat-button-toggle-group #group="matButtonToggleGroup" value="all">
+    <mat-button-toggle value="search" routerLink="/">
+      <mat-icon>
+        search
+      </mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="all" routerLink="/">
+      <mat-icon>
+        select_all
+      </mat-icon>
+    </mat-button-toggle>
+    <mat-form-field class="searchInput">
+      <input matInput [(ngModel)]="countryName" placeholder="Type country here" [disabled]="group.value != 'search'">
+    </mat-form-field>
+  </mat-button-toggle-group>
+  <mat-nav-list *ngIf="router.url == '/'">
+    <mat-accordion mat-list-item href="#" *ngFor="let c of countryList">
+      <app-country [country]="c" [hidden]="!(all || c.name.toLowerCase().includes(countryName.toLowerCase()))"></app-country>
+    </mat-accordion>
+  </mat-nav-list>
+</div>

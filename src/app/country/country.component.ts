@@ -9,18 +9,8 @@ import { Country } from '../model/country';
 export class CountryComponent implements OnInit {
 
   @Input() country: Country;
-  countryDetails = false;
 
   constructor() { }
 
   ngOnInit() { }
-
-  onClick() {
-    this.countryDetails = !this.countryDetails;
-    console.log(this.countryDetails);
-  }
-
-  getColor(): string {
-    return 'red';
-  }
 }

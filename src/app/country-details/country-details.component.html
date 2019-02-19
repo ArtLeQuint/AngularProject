@@ -6,11 +6,15 @@
       </mat-panel-title>
       <mat-panel-description>
         {{country.nativeName}}
-        &nbsp;&nbsp;&nbsp;
-        <img margin-left="5px" src={{country.flag}} height="20px" width="30px">
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <!--Content Here-->
+
+    <mat-form-field>
+      <input matInput placeholder="First name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Age">
+    </mat-form-field>
   </mat-expansion-panel>
 </div>
-

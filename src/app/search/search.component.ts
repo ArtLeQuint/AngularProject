@@ -4,22 +4,24 @@ import { ComapiService } from '../comapi.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-recherche',
-  templateUrl: './recherche.component.html',
-  styleUrls: ['./recherche.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class RechercheComponent implements OnInit {
+export class SearchComponent implements OnInit {
   countryList: Country[];
-  countryName = 'Country Name';
+  countryName = '';
   constructor(private comapi: ComapiService, private router: Router) { }
 
-  ngOnInit() { }
-
-  onClick() {
-    this.comapi.getCountryList().subscribe( d => {
+  ngOnInit() {
+    this.comapi.getCountryList().subscribe(d => {
       this.countryList = d;
-      console.log(this.countryList);
     });
   }
 
+  setSearch() {
+    this.comapi.getCountryList().subscribe(d => {
+      this.countryList = d;
+    });
+  }
 }
