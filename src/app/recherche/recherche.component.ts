@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RechercheComponent implements OnInit {
   countryList: Country[];
-  countryName = 'Afghanistan';
+  countryName = 'Country Name';
   constructor(private comapi: ComapiService, private router: Router) { }
 
   ngOnInit() { }

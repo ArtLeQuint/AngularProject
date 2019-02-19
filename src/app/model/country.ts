@@ -1,7 +1,7 @@
 import { Currency } from './currency';
 import { Language } from './language';
 import { RegionalBloc } from './regionalBloc';
-import { Translations } from "./translations";
+import { Translations } from './translations';
 
 export class Country {
    name: string;

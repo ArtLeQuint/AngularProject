@@ -1,5 +1,5 @@
-export class Currency { 
-   code   : string;
-   name   : string;
-   symbol : string;
+export class Currency {
+   code: string;
+   name: string;
+   symbol: string;
 }

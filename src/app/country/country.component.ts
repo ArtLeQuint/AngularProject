@@ -9,15 +9,15 @@ import { Country } from '../model/country';
 export class CountryComponent implements OnInit {
 
   @Input() country: Country;
-  clicked = false;
+  countryDetails = false;
 
   constructor() { }
 
   ngOnInit() { }
 
   onClick() {
-    this.clicked = !this.clicked;
-    console.log(this.clicked);
+    this.countryDetails = !this.countryDetails;
+    console.log(this.countryDetails);
   }
 
   getColor(): string {

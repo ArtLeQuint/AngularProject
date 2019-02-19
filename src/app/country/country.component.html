@@ -1,3 +1,9 @@
-<div [ngStyle]="{'color': getColor()}">
-  <button (click)="onClick()">{{country.name}}</button>
+<button mat-button (click)="onClick()">{{country.name}}</button>
+<div *ngIf="countryDetails">
+<label>Country native name :</label>
+<div>{{country.nativeName}}</div>
+<label>Country top level domain :</label>
+<div
+>{{country.topLevelDomain}}
+</div>
 </div>
