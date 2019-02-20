@@ -5,9 +5,12 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#" (click)="onClick('search')">Search</a>
+      <a mat-list-item href="#" (click)="onClick('search')">All Countries</a>
       <a mat-list-item href="#" (click)="onClick('euCountries')">E.U. Countries</a>
       <a mat-list-item href="#" (click)="onClick('naCountries')">N.A. Countries</a>
+      <a mat-list-item href="#" (click)="onClick('eurCountries')">Countries using € as currency</a>
+      <a mat-list-item href="#" (click)="onClick('usDolCountries')">Countries using American $ as currency</a>
+      <a mat-list-item class="last" href="#" (click)="onClick('canDolCountries')">Countries using Canadian $ as currency</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

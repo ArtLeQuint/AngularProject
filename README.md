@@ -1,27 +1,34 @@
 # Country
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Country, a GUI based on ANGULAR 6 allowing to search informations about countries.
 
-## Development server
+## Travis
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![Build Status](https://travis-ci.com/PamplemousseMR/Country.svg?branch=master)](https://travis-ci.com/PamplemousseMR/Country)
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Build
+# Country Spotter
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Country Spotter is a GUI based on ANGULAR 6 used for searching country simple informations.
+This was a project designed for Master 2 ILC in Strasbourg, Web Classes.
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Angular](https://angular.io/)
 
-## Running end-to-end tests
+### Use
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![alt text](media/tuto.png)
 
-## Further help
+Everything is explained in media/tuto.png
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Authors
+
+* **DELRUE Arthur** - *Initial work* - [ArtLeQuint](https://github.com/ArtLeQuint).
+
+## License
+
+This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details.

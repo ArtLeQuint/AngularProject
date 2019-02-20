@@ -15,3 +15,16 @@
   top: 0;
   z-index: 1;
 }
+
+a.mat-list-item {
+  border-top-style: groove;
+  padding-top : 10px;
+  padding-bottom : 10px;
+}
+
+a.mat-list-item.last {
+  border-top-style: groove;
+  border-bottom-style: groove;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

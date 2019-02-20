@@ -1,18 +1,25 @@
 export class Translations {
-   de = '';
-   es = '';
-   fr = '';
-   ja = '';
-   it = '';
-   br = '';
-   pt = '';
-   nl = '';
-   hr = '';
-   fa = '';
+   de: string;
+   es: string;
+   fr: string;
+   ja: string;
+   it: string;
+   br: string;
+   pt: string;
+   nl: string;
+   hr: string;
+   fa: string;
 
    public toString(): string {
-      return 'de:' + this.de + ', es:' + this.es + ', fr:' + this.fr
-       + ', ja:' + this.ja + ', it:' + this.it + ', br:' + this.br
-        + ', pt:' + this.pt + ', nl:' + this.nl + ', hr:' + this.hr + ', fa:' + this.fa;
+      return 'DE: ' + this.de +
+           ', ES: ' + this.es +
+           ', FR: ' + this.fr +
+           ', IT: ' + this.it +
+           ', BR: ' + this.br +
+           ', PT: ' + this.pt +
+           ', NL: ' + this.nl +
+           ', HR: ' + this.hr +
+           ', FA: ' + this.fa +
+           ', JA: ' + this.ja;
    }
 }

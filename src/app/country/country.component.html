@@ -1,5 +1,5 @@
 <div class="countryDetailsContent">
-  <mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="panel">
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{country.name}}
@@ -11,7 +11,16 @@
         <img class="flag" src={{country.flag}}>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <!--Full Content Here-->
+    <mat-grid-list cols="4" rowHeight="100px" *ngIf="panelOpenState">
+        <mat-grid-tile class="detailContent" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+          <mat-grid-tile-header class="header">
+              {{tile.label}}
+          </mat-grid-tile-header>
+          <mat-grid-tile-footer>
+              {{tile.text}}
+           </mat-grid-tile-footer>
+        </mat-grid-tile>
+    </mat-grid-list>
   </mat-expansion-panel>
 </div>
 

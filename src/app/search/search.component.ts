@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Country } from '../model/country';
 import { ComapiService } from '../comapi.service';
 import { Router } from '@angular/router';
+import { group } from '@angular/animations';
 
 @Component({
   selector: 'app-search',
@@ -23,6 +24,7 @@ export class SearchComponent implements OnInit {
   }
 
   check(country: Country) {
+    let itsOk = false;
     switch (this.type) {
       case 'search':
         return true;
@@ -32,6 +34,30 @@ export class SearchComponent implements OnInit {
         break;
       case 'naCountries':
         return country.subregion === 'Northern America';
+        break;
+      case 'eurCountries':
+        for (const currency of country.currencies) {
+          if (currency.code === 'EUR') {
+            itsOk = true;
+          }
+        }
+        return itsOk;
+        break;
+      case 'usDolCountries':
+        for (const currency of country.currencies) {
+          if (currency.code === 'USD') {
+            itsOk = true;
+          }
+        }
+        return itsOk;
+        break;
+      case 'canDolCountries':
+        for (const currency of country.currencies) {
+          if (currency.code === 'CAD') {
+            itsOk = true;
+          }
+        }
+        return itsOk;
         break;
       default:
         break;
