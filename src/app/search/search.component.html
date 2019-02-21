@@ -20,9 +20,12 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="searchInput">
-      <input matInput [(ngModel)]="countryName" placeholder="Type your research here" *ngIf="selected == 'name' || selected === undefined" [disabled]="group.value != 'search' || selected != 'name'">
-      <input matInput [(ngModel)]="capital" placeholder="Type your research here" *ngIf="selected == 'capital'" [disabled]="group.value != 'search' || selected != 'capital'">
-      <input matInput [(ngModel)]="region" placeholder="Type your research here" *ngIf="selected == 'region'" [disabled]="group.value != 'search' || selected != 'region'">
+      <input matInput [(ngModel)]="countryName" placeholder="Type your research here" 
+             *ngIf="selected == 'name' || selected === undefined" [disabled]="group.value != 'search' || selected != 'name'">
+      <input matInput [(ngModel)]="capital" placeholder="Type your research here"
+             *ngIf="selected == 'capital'" [disabled]="group.value != 'search' || selected != 'capital'">
+      <input matInput [(ngModel)]="region" placeholder="Type your research here" 
+             *ngIf="selected == 'region'" [disabled]="group.value != 'search' || selected != 'region'">
     </mat-form-field>
   </mat-button-toggle-group>
   <button mat-icon-button class="refreshButton" (click)="ngOnInit()">
