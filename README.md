@@ -2,10 +2,6 @@
 
 Country, a GUI based on ANGULAR 6 allowing to search informations about countries.
 
-## Travis
-
-[![Build Status](https://travis-ci.com/PamplemousseMR/Country.svg?branch=master)](https://travis-ci.com/PamplemousseMR/Country)
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -19,11 +15,19 @@ This was a project designed for Master 2 ILC in Strasbourg, Web Classes.
 
 - [Angular](https://angular.io/)
 
+- [Angular Material](https://material.angular.io/)
+
+- [Node JS](https://nodejs.org/en/)
+
+- [Node Packet Manager](https://www.npmjs.com/)
+
 ### Use
 
 ![alt text](media/tuto.png)
 
-Everything is explained in media/tuto.png
+You can compile it with ng serve -o in Visual Studio Code's shell or with ng serve --host 0.0.0.0 --port 8080 --disableHostCheck if you're using C9 IDE.
+
+Everything is explained simply in media/tuto.png
 
 ## Authors
 
