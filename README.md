@@ -1,15 +1,12 @@
-# Country
-
-Country, a GUI based on ANGULAR 6 allowing to search informations about countries.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 # Country Spotter
 
 Country Spotter is a GUI based on ANGULAR 6 used for searching country simple informations.
 This was a project designed for Master 2 ILC in Strasbourg, Web Classes.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -31,7 +28,7 @@ Everything is explained simply in media/tuto.png
 
 ## Authors
 
-* **DELRUE Arthur** - *Initial work* - [ArtLeQuint](https://github.com/ArtLeQuint).
+**DELRUE Arthur** - *Initial work* - [ArtLeQuint](https://github.com/ArtLeQuint).
 
 ## License
 
